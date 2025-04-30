@@ -28,6 +28,9 @@ public class Main {
        conta2.imprimirExtrato();
        conta3.imprimirExtrato();
 
+       System.out.println();
+       System.out.println();
+
        System.out.println("+++++CLIENTES DO BANCO+++++++");
        conta.listaClientes.forEach(n -> System.out.println(n));
         

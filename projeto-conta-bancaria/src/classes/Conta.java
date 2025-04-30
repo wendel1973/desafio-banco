@@ -16,7 +16,6 @@ public abstract class Conta {
         this.numeroConta = SEQUENCIAL++;
         this.cliente = cliente;
         listaClientes.add(cliente);
-
     }
     public int getNumeroConta() {
         return numeroConta;
