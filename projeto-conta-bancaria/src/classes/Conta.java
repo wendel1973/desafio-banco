@@ -17,7 +17,7 @@ public abstract class Conta {
     public Conta(Cliente cliente){
         this.numeroConta = SEQUENCIAL++;
         this.cliente = cliente;
-        String dados = String.valueOf(AGENCIA) + " " + String.valueOf(numeroConta);
+        String dados = " Agencia: "+String.valueOf(AGENCIA) + " Conta: " + String.valueOf(numeroConta);
         listaClientes.put(cliente, dados);
     }
     public int getNumeroConta() {
