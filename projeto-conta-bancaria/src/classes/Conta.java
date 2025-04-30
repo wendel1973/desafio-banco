@@ -9,11 +9,13 @@ public abstract class Conta {
     protected int numeroConta;
     protected double saldo;
     public Cliente cliente;
+    public static List<Cliente> listaClientes = new ArrayList<>();
     protected List<String> extrato = new ArrayList<>();
 
     public Conta(Cliente cliente){
         this.numeroConta = SEQUENCIAL++;
         this.cliente = cliente;
+        listaClientes.add(cliente);
 
     }
     public int getNumeroConta() {
