@@ -32,7 +32,7 @@ public class Main {
        System.out.println();
 
        System.out.println("+++++CLIENTES DO BANCO+++++++");
-       conta.listaClientes.forEach(n -> System.out.println(n));
+       System.out.println(conta.listaClientes);
         
     }
     

@@ -1,7 +1,9 @@
 package classes;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public abstract class Conta {
     private static int SEQUENCIAL = 1;
@@ -9,13 +11,14 @@ public abstract class Conta {
     protected int numeroConta;
     protected double saldo;
     public Cliente cliente;
-    public static List<Cliente> listaClientes = new ArrayList<>();
+    public static Map<Cliente, String> listaClientes = new HashMap<>();
     protected List<String> extrato = new ArrayList<>();
 
     public Conta(Cliente cliente){
         this.numeroConta = SEQUENCIAL++;
         this.cliente = cliente;
-        listaClientes.add(cliente);
+        String dados = String.valueOf(AGENCIA) + " " + String.valueOf(numeroConta);
+        listaClientes.put(cliente, dados);
     }
     public int getNumeroConta() {
         return numeroConta;
