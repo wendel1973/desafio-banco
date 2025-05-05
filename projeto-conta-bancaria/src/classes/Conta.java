@@ -11,14 +11,30 @@ public abstract class Conta {
     protected int numeroConta;
     protected double saldo;
     public Cliente cliente;
-    public static Map<Cliente, String> listaClientes = new HashMap<>();
+    public static Map<Cliente, List<String>> listaClientes = new HashMap<>();
     protected List<String> extrato = new ArrayList<>();
 
     public Conta(Cliente cliente){
         this.numeroConta = SEQUENCIAL++;
         this.cliente = cliente;
-        String dados = " Agencia: "+String.valueOf(AGENCIA) + " Conta: " + String.valueOf(numeroConta);
-        listaClientes.put(cliente, dados);
+        //String dados = " Agencia: "+String.valueOf(AGENCIA) + " Conta: " + String.valueOf(numeroConta);
+        List<String> dados = new ArrayList<>();
+        dados.add(String.valueOf(AGENCIA));
+        dados.add(String.valueOf(numeroConta));
+
+              
+       
+        if (listaClientes.containsKey(cliente)){
+            List<String> teste = new ArrayList<>();
+            teste.addAll(listaClientes.get(cliente));
+            for(String s:teste){
+                dados.add(s);
+            }
+            listaClientes.put(cliente, dados);
+                 
+        }else{
+            listaClientes.put(cliente, dados);
+        }
     }
     public int getNumeroConta() {
         return numeroConta;

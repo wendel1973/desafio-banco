@@ -8,12 +8,14 @@ public class Main {
         ContaCorrente conta = new ContaCorrente(jose);
         ContaCorrente conta2 = new ContaCorrente(carlos);
         ContaCorrente conta3 = new ContaCorrente(aparecido);
+        ContaPoupanca conta4 = new ContaPoupanca(aparecido);
         
         conta.depositar(100d);
         conta.transferir(50d, conta2);
         conta3.depositar(150d);
         conta2.depositar(300d);
         conta2.transferir(65d, conta);
+        conta4.depositar(400d);
 
         
        // System.out.println("Agencia: "+ conta.getAgencia()+" - Conta: "+conta.getNumeroConta()+ " Cliente: "+conta.cliente +" Saldo: "+ conta.getSaldo());
@@ -27,12 +29,16 @@ public class Main {
        conta.imprimirExtrato();
        conta2.imprimirExtrato();
        conta3.imprimirExtrato();
+       conta4.imprimirExtrato();
 
        System.out.println();
        System.out.println();
 
        System.out.println("+++++CLIENTES DO BANCO+++++++");
        System.out.println(conta.listaClientes);
+
+
+       System.out.println(carlos.contaCliente);
         
     }
     

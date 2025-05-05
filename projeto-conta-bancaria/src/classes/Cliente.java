@@ -3,6 +3,7 @@ package classes;
 public class Cliente {
     private String nome;
     private long cpf;
+    public ContaCorrente contaCliente;
     
     public Cliente(String nome, long cpf){
         this.nome = nome;
@@ -15,6 +16,7 @@ public class Cliente {
     public long getCpf() {
         return cpf;
     }
+    
     @Override
     public String toString() {
         // TODO Auto-generated method stub
