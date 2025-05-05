@@ -29,6 +29,7 @@ public abstract class Conta {
             teste.addAll(listaClientes.get(cliente));
             for(String s:teste){
                 dados.add(s);
+                System.out.println("S: "+ s);
             }
             listaClientes.put(cliente, dados);
                  
