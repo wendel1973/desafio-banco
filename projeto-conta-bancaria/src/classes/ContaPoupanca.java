@@ -10,15 +10,6 @@ public class ContaPoupanca extends Conta{
         System.out.println("=========Extrato Conta Poupança==========");
         super.imprimirInfosComuns();
     }
-    @Override
-    public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
-    }
-    @Override
-    public int getAgencia() {
-        // TODO Auto-generated method stub
-        return super.getAgencia();
-    }
+    
 
 }

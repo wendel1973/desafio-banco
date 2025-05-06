@@ -77,7 +77,6 @@ public abstract class Conta {
             throw new RuntimeException("Transação não permitida.");
         }
     }
-   
     public void transferir(double valor, Conta conta){
         if(valor > 0){
             this.sacar(valor);

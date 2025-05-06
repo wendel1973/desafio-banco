@@ -35,7 +35,6 @@ public class Main {
         System.out.println();
 
         System.out.println("+++++CLIENTES DO BANCO+++++++");
-        //System.out.println(conta.listaClientes);
         conta.relacaoClientes();
 
         
