@@ -1,6 +1,6 @@
 package classes;
 
-public class Main {
+public class Banco {
     public static void main(String[] args) {
         Cliente jose = new Cliente("Jose", 123456);
         Cliente carlos = new Cliente("Carlos", 789456);
